@@ -2,9 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/explorer-landing.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -16,9 +13,13 @@
       ]
     },
     {
-      "source": "/explorer-landing.html",
+      "source": "/",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}: "public, max-age=0, must-revalidate" }
       ]
     }
   ]
